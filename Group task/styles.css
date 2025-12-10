@@ -1,0 +1,89 @@
+/* Definē krāsas visai lapai un visiem elementiem. Saprotu, ka šim projektam varētu arī to likt pie body { } ,
+bet root {} izmantot ir ērti, ja ir vairāki izkārtojumi, lapas*/
+:root {
+    --space-3: 12px;
+    --space-4: 16px;
+    --space-6: 24px;
+
+    --page-bg: #bac8b1;
+    --text: #404e3b;
+    --muted: #6c8480;
+    --brand: #7b9669;
+    --brand-strong: #404e3b;
+    --card-border: #bac8b1;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 2;
+    padding: 0;
+}
+
+/* fonts atbilstoši prasībām */
+body {
+    font-family: "Inter", system-ui, Arial, sans-serif;
+    color: var(--text);
+    line-height: 1.6;
+    background: var(--page-bg);
+}
+
+/* lapas platums, lai nav izstiepts pa visu ekrānu. malas no augšas un apakšas. auto centrē abus section visu */
+main,
+footer {
+    max-width: 900px;
+    margin: var(--space-6) auto;
+    padding: 0 var(--space-4);
+}
+
+/* iecentrēts virsraksts about us */
+h1 {
+    text-align: center;
+    margin: var(--space-6) 0;
+}
+
+/* sadala katru section HTML atsevišķā blokā un definē teksta izkārtojumu katrā blokā un krāsu */
+.profile {
+    background: #e7eedb;
+    border: 1px solid var(--card-border);
+    border-radius: 16px;
+    padding: var(--space-6);
+    margin-bottom: var(--space-6);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+    transition: box-shadow 0.2 ease, transform 0.2s ease;
+}
+
+/* uzbraucot ar peli katra kartīte paceļas un ēna paliek mazliet tumšāka */
+.profile:hover {
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.22);
+    transform: translateY(-3px);
+}
+
+/* Twitter un Facebook linki ir kā pogas uztaisītas  */
+.button {
+    display: inline-block;
+    padding: 0.4rem 1.2rem;
+    border: none;
+    /* pirmās divas rindiņas pogas izmēru nosaka, līdz ar teksta izmēru un pieliek atstarpes no teksta līdz pogas malām*/
+    border-radius: 999px;
+    /* noapaļo pogas stūrus */
+    background-color: var(--brand);
+    /* pogas krāsu paņem no koda augšas */
+    color: #ffffff;
+    /* pogas tekst krāsa, var arī ņemt no koda augšas definētās */
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    transition: background-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+/* uzbraucot uz pogām tās izlec ārā un paliek tumšāka tā poga, uz kuras ir uzbraukts */
+.button:hover {
+    background: var(--brand-strong);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.22);
+}
