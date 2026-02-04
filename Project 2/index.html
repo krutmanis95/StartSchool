@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz Me If You Can</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="main.js" defer></script>
+</head>
+
+<body>
+    <div class="page">
+        <div class="header">
+            <h1>Discover your vegetable personality</h1>
+        </div>
+
+        <div class="quiz-container">
+            <form id="quiz_form">
+                <div class="question">
+                    <label class="question-label">1. How long Kristofers and Rafiks where making quizz?</label>
+                    <div class="radio-group">
+                        <label class="radio-option">
+                            <input type="radio" name="q1" value="0" required />
+                            <span>5 minutes</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="q1" value="0" required />
+                            <span>30 minutes</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="q1" value="1" required />
+                            <span>1 hour</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="question">
+                    <label class="question-label">2. Where do you thrive best?</label>
+                    <div class="radio-group">
+                        <label class="radio-option">
+                            <input type="radio" name="q2" value="0" required />
+                            <span>Sunny - Love the bright spots</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="q2" value="0" required />
+                            <span>Shady - Prefer the cool spots</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="q2" value="1" required />
+                            <span>Mixed - Adaptable anywhere</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="question">
+                    <label class="question-label">3. What's your texture preference?</label>
+                    <div class="radio-group">
+                        <label class="radio-option">
+                            <input type="radio" name="q3" value="0" required />
+                            <span>Crisp - Fresh and crunchy</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="q3" value="0" required />
+                            <span>Soft - Smooth and tender</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="q3" value="1" required />
+                            <span>Firm - Solid and substantial</span>
+                        </label>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <div class="button-container">
+            <button id="submit-btn" type="button">Submit</button>
+        </div>
+
+        <div class="output" id="result">
+            <h2 id="result-text"></h2>
+        </div>
+    </div>
+</body>
+
+</html>
